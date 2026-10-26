@@ -18,7 +18,7 @@ dns.setServers([
 ]);
 
 const app=express();
-const Port=8080;
+const Port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(cors());
@@ -26,8 +26,8 @@ app.use(cors());
 app.use("/api",chatRoutes);
 app.use("/api/documents", documentsRouter);
 
-app.listen(Port,()=>{
-    console.log(`server running on ${Port}`);
+app.listen(Port, "0.0.0.0", () => {
+    console.log(`Server running on port ${Port}`);
     connectDB();
 });
 const connectDB = async()=>{

@@ -1,0 +1,34 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Uploaded files and temporary data
+**/uploads/
+**/temp/
+**/tmp/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local coverage output
+coverage/
